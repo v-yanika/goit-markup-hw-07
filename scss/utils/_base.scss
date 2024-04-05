@@ -2,6 +2,12 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--main-font);
+    color: var(--title-color);
+    background-color: var(--accent-text-color);
+}
+
 *,
 *::before,
 *::after {
@@ -55,7 +61,7 @@ img {
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--base-anim);
 
     &:hover,
     &:focus {
