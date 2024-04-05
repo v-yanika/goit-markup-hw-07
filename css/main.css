@@ -5,17 +5,21 @@
   --background-color: #2F303A;
   --accent-color: #2196F3;
   --accent-text-color: #FFFFFF;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: var(--title-color);
-  background-color: var(--accent-text-color);
+  --main-font: "Roboto",
+      sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --base-anim: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--title-color);
+  background-color: var(--accent-text-color);
 }
 
 *,
@@ -74,8 +78,8 @@ img {
   transition-property: color;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: var(--base-anim);
+          transition-timing-function: var(--base-anim);
 }
 .link:hover, .link:focus {
   color: var(--accent-color);
@@ -180,7 +184,7 @@ img {
 .logo {
   display: block;
   padding: 0;
-  font-family: Raleway;
+  font-family: var(--secondary-font);
   font-size: 26px;
   letter-spacing: 0.78px;
   text-decoration: none;
@@ -195,7 +199,7 @@ img {
       -ms-flex-align: baseline;
           align-items: baseline;
   margin-bottom: 20px;
-  font-family: Raleway;
+  font-family: var(--secondary-font);
   font-size: 26px;
   letter-spacing: 0.78px;
   text-decoration: none;
@@ -223,7 +227,7 @@ img {
 .footer__title {
   display: block;
   color: var(--accent-text-color);
-  font-family: Roboto;
+  font-family: var(--main-font);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -242,7 +246,7 @@ img {
   padding-bottom: 27px;
   color: var(--accent-text-color);
   text-align: center;
-  font-family: Roboto;
+  font-family: var(--main-font);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -346,10 +350,10 @@ img {
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250ms var(--base-anim);
+  transition: -webkit-transform 250ms var(--base-anim);
+  transition: transform 250ms var(--base-anim);
+  transition: transform 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
 }
 
 .closebtn {
@@ -386,8 +390,8 @@ img {
   height: 18px;
   background-size: contain;
   fill: black;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 250ms var(--base-anim);
+  transition: fill 250ms var(--base-anim);
 }
 
 .closebtn:hover > .close,
@@ -431,8 +435,8 @@ img {
   outline: 1px solid rgba(33, 33, 33, 0.2);
   outline-offset: -1px;
   border-color: transparent;
-  -webkit-transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: outline 250ms var(--base-anim);
+  transition: outline 250ms var(--base-anim);
 }
 .form__input:focus {
   outline: solid var(--accent-color);
@@ -682,7 +686,7 @@ img {
 
 .team__text {
   color: var(--text-color);
-  font-family: Roboto;
+  font-family: var(--main-font);
   font-size: 16px;
   line-height: normal;
   letter-spacing: 0.48px;
@@ -740,8 +744,8 @@ img {
   border-radius: 4px;
   border: 1px solid #AFB1B8;
   fill: #AFB1B8;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border 250ms var(--base-anim), fill 250ms var(--base-anim);
+  transition: border 250ms var(--base-anim), fill 250ms var(--base-anim);
 }
 .clients__link:hover, .clients__link:focus {
   border: 1px solid var(--accent-color);
@@ -834,8 +838,8 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms var(--base-anim);
+  transition: background-color 250ms var(--base-anim);
 }
 
 .footer__social-icon {
@@ -931,10 +935,10 @@ img {
   border-radius: 4px;
   background: #F5F4FA;
   font-style: normal;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--base-anim), background-color 250ms var(--base-anim), -webkit-box-shadow 250ms var(--base-anim);
+  transition: color 250ms var(--base-anim), background-color 250ms var(--base-anim), -webkit-box-shadow 250ms var(--base-anim);
+  transition: color 250ms var(--base-anim), background-color 250ms var(--base-anim), box-shadow 250ms var(--base-anim);
+  transition: color 250ms var(--base-anim), background-color 250ms var(--base-anim), box-shadow 250ms var(--base-anim), -webkit-box-shadow 250ms var(--base-anim);
 }
 .button__main:hover, .button__main:focus {
   background-color: var(--accent-color);
@@ -984,10 +988,10 @@ img {
   text-decoration: none;
   border: 1px solid #EEE;
   background-color: var(--accent-text-color);
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 250ms var(--base-anim);
+  transition: -webkit-box-shadow 250ms var(--base-anim);
+  transition: box-shadow 250ms var(--base-anim);
+  transition: box-shadow 250ms var(--base-anim), -webkit-box-shadow 250ms var(--base-anim);
 }
 .card__link:hover, .card__link:focus {
   -webkit-box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
@@ -1008,10 +1012,10 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
+  transition: opacity 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
+  transition: transform 250ms var(--base-anim), opacity 250ms var(--base-anim);
+  transition: transform 250ms var(--base-anim), opacity 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
 }
 
 .card__link:hover .card__box::before,
@@ -1029,10 +1033,10 @@ img {
   opacity: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
+  transition: opacity 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
+  transition: transform 250ms var(--base-anim), opacity 250ms var(--base-anim);
+  transition: transform 250ms var(--base-anim), opacity 250ms var(--base-anim), -webkit-transform 250ms var(--base-anim);
   color: var(--accent-text-color);
   font-size: 18px;
   font-style: normal;
