@@ -7,7 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: var(--background-color);
-    background-image: linear-gradient(to right, #2F303A 40%, #2F303A 40%), url(../images/ImgBG1.jpg);
+    background-image: -webkit-linear-gradient(to right, #2F303A 40%, #2F303A 40%), url(../images/ImgBG1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
